@@ -1,35 +1,23 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '../public/vite.svg'
-import './App.css'
+import './App.module.scss'
+import s from './App.module.scss'
+import ss from './index.module.scss'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+import {Button} from "@mui/material";
+import DefaultPage from "../components/pages/DefaultPage.jsx";
+import PageTwo from "../components/pages/Page2.jsx";
+
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Здароу, Алия</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          жмяк {count}
-        </button><hr/>
-        <p>
-           Я хочу есть
-        </p>
-      </div>
-      <p className="read-the-docs">
-        <h2>покладай мне еды пж</h2><br/><h1>🙏</h1><br/>или поклади я хз
-      </p>
-    </>
-  )
+    return (
+            <Routes>
+                <Route path="*" element={<DefaultPage />} />
+                <Route path="/two" element={<PageTwo />} />
+            </Routes>
+    );
 }
 
 export default App
