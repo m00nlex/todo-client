@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: #7e767a;
+    width: 100%;
+    height: 100%;
+}
+body {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.whiteText {
+    color: #fff;
+}
+
+.page {
+    @extend .whiteText;
+    text-align: center;
+}
+
+.button {
+    background-color: aliceblue;
+}
+
+a {
+  text-decoration: none;
+    color: unset;
+}
